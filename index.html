@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Andrean Rayhan Wijaya — Creative Designer & Visual Storyteller. Portfolio showcasing graphic design, UI/UX, and branding work." />
+  <meta name="keywords" content="Andrean Rayhan Wijaya, graphic designer, UI/UX, portfolio, visual storyteller, Canva, Figma, Photoshop" />
+  <title>Andrean Rayhan Wijaya — Protofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="terminal/terminal.css" />
+</head>
+<body>
+
+  <!-- ===== SILVER WOLF TERMINAL INTRO ===== -->
+  <!--
+    📖 BELAJAR HTML:
+    div = kotak kosong yang bisa kita isi apa saja
+    id  = nama unik elemen (dipanggil lewat JS: getElementById)
+    class = nama grup elemen (dipanggil lewat CSS: .namaclass)
+  -->
+  <div id="sw-terminal" class="sw-terminal">
+
+    <!-- Partikel background (dibuat oleh JS) -->
+    <div class="sw-particles" id="sw-particles"></div>
+
+    <!-- Garis scan efek monitor lama -->
+    <div class="sw-scanline"></div>
+
+    <!-- Header terminal - mirip title bar di jendela terminal -->
+    <div class="sw-terminal-header">
+      <div class="sw-terminal-dots">
+        <span class="sw-dot sw-dot-red"></span>
+        <span class="sw-dot sw-dot-yellow"></span>
+        <span class="sw-dot sw-dot-green"></span>
+      </div>
+      <span class="sw-terminal-title">SILVER WOLF OS v13.7 — QUANTUM BREACH PROTOCOL</span>
+      <span class="sw-terminal-status" id="sw-status">● ACTIVE</span>
+    </div>
+
+    <!-- Isi terminal -->
+    <div class="sw-terminal-body">
+
+      <!-- Baris teks yang diketik otomatis oleh JS -->
+      <!-- id="sw-output" → tempat JS menulis teksnya -->
+      <div id="sw-output" class="sw-output"></div>
+
+      <!-- Baris input aktif (cursor berkedip) -->
+      <div class="sw-input-line" id="sw-input-line">
+        <span class="sw-prompt">SW@HACK:~$</span>
+        <span class="sw-cursor" id="sw-cursor">█</span>
+      </div>
+
+    </div>
+
+    <!-- Tombol SKIP -->
+    <button class="sw-skip-btn" id="sw-skip-btn" onclick="skipTerminal()">
+      SKIP INTRO
+    </button>
+
+    <!-- Efek glitch di layar -->
+    <div class="sw-glitch-overlay" id="sw-glitch"></div>
+
+  </div>
+  <!-- ===== END TERMINAL ===== -->
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo">Andre</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+          <span class="theme-icon" id="theme-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </span>
+        </button>
+        <a href="#contact" class="btn btn-primary nav-cta" id="nav-cta">Contact Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-container">
+      <div class="hero-image-wrapper" id="hero-image">
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring hero-image-ring-2"></div>
+        <img src="assets/profile.png" alt="Andrean Rayhan Wijaya — Creative Designer" class="hero-photo" id="hero-photo" />
+        <div class="hero-badge" id="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Available for Projects
+        </div>
+      </div>
+      <div class="hero-content" id="hero-content">
+        <p class="hero-greeting" id="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name" id="hero-name">
+          Andrean<br />Rayhan<br /><em>Wijaya</em>
+        </h1>
+        <p class="hero-tagline" id="hero-tagline">Creative Designer &amp; Visual Storyteller</p>
+        <p class="hero-description" id="hero-description">
+          Crafting meaningful visual experiences through design, branding, and digital art that leave a lasting impression.
+        </p>
+        <div class="hero-actions" id="hero-actions">
+          <a href="#portfolio" class="btn btn-primary" id="view-work-btn">
+            View My Work
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="assets/resume.pdf" class="btn btn-outline" id="download-resume-btn" download>
+            Download Resume
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats" id="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-target="2">0</span>+
+            <span class="hero-stat-label">Projects</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-target="3">0</span>+
+            <span class="hero-stat-label">Tools Mastered</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-target="2">0</span>+
+            <span class="hero-stat-label">Certifications</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" id="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-label">Who I Am</span>
+        <h2 class="section-title">About <em>Me</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col" data-animate>
+          <div class="about-image-frame">
+            <img src="assets/profile.png" alt="Andrean Rayhan Wijaya" class="about-photo" id="about-photo" />
+            <div class="about-image-accent"></div>
+          </div>
+          <div class="about-tag about-tag-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Graphic Designer
+          </div>
+          <div class="about-tag about-tag-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            UI/UX Designer
+          </div>
+        </div>
+        <div class="about-content-col" data-animate>
+          <p class="about-intro">
+            A <strong>creative student</strong> at <em>SMK Telkom Purwokerto</em> with a deep passion for visual design and storytelling.
+          </p>
+          <p class="about-body">
+            With expertise in Graphic Design, UI/UX, and Basic Programming, I specialize in creating logos, posters, brochures, and digital content that communicate ideas powerfully. I work across tools like Canva, Photoshop, and Figma to bring brands and concepts to life with precision and artistry.
+          </p>
+          <p class="about-body">
+            My approach blends aesthetic sensibility with strategic thinking — every design decision tells a story and serves a purpose.
+          </p>
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <span class="about-info-label">Education</span>
+              <span class="about-info-value">SMK Telkom Purwokerto</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">Year</span>
+              <span class="about-info-value">2024 – 2027</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">Speciality</span>
+              <span class="about-info-value">Graphic & UI/UX Design</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">Email</span>
+              <span class="about-info-value">andrayhan.wijaya@gmail.com</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary" id="about-cta">Let's Work Together</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-label">What I Do</span>
+        <h2 class="section-title">My <em>Skills</em></h2>
+      </div>
+      <div class="skills-tools" data-animate>
+        <h3 class="skills-category-title">Design Tools</h3>
+        <div class="tools-grid">
+          <div class="tool-card" id="tool-canva">
+            <div class="tool-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+            </div>
+            <span class="tool-name">Canva</span>
+          </div>
+          <div class="tool-card" id="tool-photoshop">
+            <div class="tool-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 17V7h4a3 3 0 0 1 0 6H7"/></svg>
+            </div>
+            <span class="tool-name">Photoshop</span>
+          </div>
+          <div class="tool-card" id="tool-figma">
+            <div class="tool-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
+            </div>
+            <span class="tool-name">Figma</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-animate id="skill-branding">
+          <div class="skill-card-inner">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="skill-title">Branding & Identity</h3>
+            <p class="skill-description">Creating cohesive brand systems, logos, and visual identities that resonate with target audiences and build lasting recognition.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Logo Design</span>
+              <span class="skill-tag">Brand Guidelines</span>
+              <span class="skill-tag">Visual Identity</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-animate id="skill-uiux">
+          <div class="skill-card-inner">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="skill-title">UI/UX & Web Design</h3>
+            <p class="skill-description">Designing intuitive digital experiences from wireframes to high-fidelity prototypes, prioritizing usability and aesthetic appeal.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Wireframing</span>
+              <span class="skill-tag">Prototyping</span>
+              <span class="skill-tag">User Research</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-animate id="skill-print">
+          <div class="skill-card-inner">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="skill-title">Typography & Layout</h3>
+            <p class="skill-description">Mastery of typographic hierarchy, grid systems, and layout composition to create visually balanced and readable designs.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Print Design</span>
+              <span class="skill-tag">Brochures</span>
+              <span class="skill-tag">Posters</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card" data-animate id="skill-digital">
+          <div class="skill-card-inner">
+            <div class="skill-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+            </div>
+            <h3 class="skill-title">Digital Content</h3>
+            <p class="skill-description">Producing engaging digital content for social media, marketing campaigns, and online platforms with compelling visual narratives.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Social Media</span>
+              <span class="skill-tag">Infographics</span>
+              <span class="skill-tag">Digital Art</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-label">My Work</span>
+        <h2 class="section-title">Featured <em>Projects</em></h2>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card" data-animate id="project-umi-ais">
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-img-placeholder portfolio-img-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>Umi Ais Brand Identity</span>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-role">Graphic Designer</span>
+                <h3 class="portfolio-overlay-title">Umi Ais Home-Made Food</h3>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-category">Branding</span>
+              <span class="portfolio-year">2024</span>
+            </div>
+            <h3 class="portfolio-card-title">Umi Ais Home-Made Food</h3>
+            <p class="portfolio-card-description">
+              Designed the complete brand identity for a home-based food business specializing in Toples Cookies — including logo design, digital brochure, and full product catalog.
+            </p>
+            <div class="portfolio-deliverables">
+              <span class="deliverable-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Brand Logo
+              </span>
+              <span class="deliverable-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Digital Brochure
+              </span>
+              <span class="deliverable-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Product Catalog
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-animate id="project-clothing">
+          <div class="portfolio-card-image">
+            <div class="portfolio-card-img-placeholder portfolio-img-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg>
+              <span>Clothing Visual Identity</span>
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-role">Fashion Designer</span>
+                <h3 class="portfolio-overlay-title">Clothing Project</h3>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-category">Fashion Design</span>
+              <span class="portfolio-year">2024</span>
+            </div>
+            <h3 class="portfolio-card-title">Clothing Project</h3>
+            <p class="portfolio-card-description">
+              Developed custom clothing designs as a school project, encompassing the full creative process from concept development to final visual identity and presentation.
+            </p>
+            <div class="portfolio-deliverables">
+              <span class="deliverable-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Design Concept
+              </span>
+              <span class="deliverable-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Visual Identity
+              </span>
+              <span class="deliverable-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Custom Apparel
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-label">Background</span>
+        <h2 class="section-title">Experience &amp; <em>Certifications</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-animate id="exp-smk">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-title">SMK Telkom Purwokerto</h3>
+                <span class="timeline-subtitle">Vocational High School — Multimedia & Design</span>
+              </div>
+              <span class="timeline-date">2024 – 2027</span>
+            </div>
+            <p class="timeline-description">
+              Pursuing a focused curriculum in multimedia, graphic design, UI/UX, and digital content creation. Actively applying skills through real-world projects and collaborations.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Graphic Design</span>
+              <span class="timeline-tag">Multimedia</span>
+              <span class="timeline-tag">Basic Programming</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item" data-animate id="exp-webinar">
+          <div class="timeline-dot timeline-dot-cert"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-title">Ngabuburit Webinar</h3>
+                <span class="timeline-subtitle">Synthid Technology IndoCEISS Central Java</span>
+              </div>
+              <span class="timeline-date">February 2026</span>
+            </div>
+            <p class="timeline-description">
+              Participated in a technology webinar focused on emerging digital trends and innovative solutions in the Central Java region, enhancing knowledge in modern tech applications.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Certificate</span>
+              <span class="timeline-tag">Technology</span>
+              <span class="timeline-tag">Digital Trends</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's <em>Connect</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-animate>
+          <p class="contact-intro">
+            Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together.
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:andrayhan.wijaya@gmail.com" class="contact-method" id="contact-email">
+              <div class="contact-method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-method-info">
+                <span class="contact-method-label">Email</span>
+                <span class="contact-method-value">andrayhan.wijaya@gmail.com</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-arrow"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="tel:089696252009" class="contact-method" id="contact-phone">
+              <div class="contact-method-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-method-info">
+                <span class="contact-method-label">Phone</span>
+                <span class="contact-method-value">089696252009</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-arrow"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper" data-animate>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group" id="form-group-name">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
+              </div>
+              <div class="form-group" id="form-group-email">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group" id="form-group-subject">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Collaboration" />
+            </div>
+            <div class="form-group" id="form-group-message">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="send-message-btn">
+              Send Message
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">Andre</span>
+          <p class="footer-tagline">Creative Designer & Visual Storyteller</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Andrean Rayhan Wijaya. Crafted with passion.</p>
+        <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="terminal/terminal.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
