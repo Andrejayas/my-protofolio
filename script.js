@@ -245,3 +245,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+// ───────────── CERTIFICATE LIGHTBOX ─────────────
+// Fungsi ini dipanggil dari onclick di HTML
+// Membuka modal besar untuk lihat sertifikat
+
+function openCert(src, caption) {
+  const lightbox = document.getElementById('cert-lightbox');
+  const img      = document.getElementById('lightbox-img');
+  const cap      = document.getElementById('lightbox-caption');
+
+  img.src = src;
+  img.alt = caption;
+  cap.textContent = caption;
+
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden'; // kunci scroll
+}
+
+function closeCert() {
+  const lightbox = document.getElementById('cert-lightbox');
+  lightbox.classList.remove('open');
+  document.body.style.overflow = ''; // buka scroll lagi
+}
+
+// Tutup lightbox dengan tombol Escape di keyboard
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCert();
+});
+

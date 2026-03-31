@@ -5,76 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Andrean Rayhan Wijaya — Creative Designer & Visual Storyteller. Portfolio showcasing graphic design, UI/UX, and branding work." />
   <meta name="keywords" content="Andrean Rayhan Wijaya, graphic designer, UI/UX, portfolio, visual storyteller, Canva, Figma, Photoshop" />
-  <title>Andrean Rayhan Wijaya — Protofolio</title>
+ <title>Andrean Rayhan Wijaya | Portofolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="terminal/terminal.css" />
 </head>
 <body>
-
-  <!-- ===== SILVER WOLF TERMINAL INTRO ===== -->
-  <!--
-    📖 BELAJAR HTML:
-    div = kotak kosong yang bisa kita isi apa saja
-    id  = nama unik elemen (dipanggil lewat JS: getElementById)
-    class = nama grup elemen (dipanggil lewat CSS: .namaclass)
-  -->
-  <div id="sw-terminal" class="sw-terminal">
-
-    <!-- Partikel background (dibuat oleh JS) -->
-    <div class="sw-particles" id="sw-particles"></div>
-
-    <!-- Garis scan efek monitor lama -->
-    <div class="sw-scanline"></div>
-
-    <!-- Header terminal - mirip title bar di jendela terminal -->
-    <div class="sw-terminal-header">
-      <div class="sw-terminal-dots">
-        <span class="sw-dot sw-dot-red"></span>
-        <span class="sw-dot sw-dot-yellow"></span>
-        <span class="sw-dot sw-dot-green"></span>
-      </div>
-      <span class="sw-terminal-title">SILVER WOLF OS v13.7 — QUANTUM BREACH PROTOCOL</span>
-      <span class="sw-terminal-status" id="sw-status">● ACTIVE</span>
-    </div>
-
-    <!-- Isi terminal -->
-    <div class="sw-terminal-body">
-
-      <!-- Baris teks yang diketik otomatis oleh JS -->
-      <!-- id="sw-output" → tempat JS menulis teksnya -->
-      <div id="sw-output" class="sw-output"></div>
-
-      <!-- Baris input aktif (cursor berkedip) -->
-      <div class="sw-input-line" id="sw-input-line">
-        <span class="sw-prompt">SW@HACK:~$</span>
-        <span class="sw-cursor" id="sw-cursor">█</span>
-      </div>
-
-    </div>
-
-    <!-- Tombol SKIP -->
-    <button class="sw-skip-btn" id="sw-skip-btn" onclick="skipTerminal()">
-      SKIP INTRO
-    </button>
-
-    <!-- Efek glitch di layar -->
-    <div class="sw-glitch-overlay" id="sw-glitch"></div>
-
-  </div>
-  <!-- ===== END TERMINAL ===== -->
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo" id="nav-logo">Andre</a>
+      <a href="#hero" class="nav-logo" id="nav-logo">AndreX</a>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-actions">
@@ -437,7 +385,113 @@
     </div>
   </section>
 
+  <!-- ===== CERTIFICATES SECTION ===== -->
+  <section class="section certificates-section" id="certificates">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-label">Achievements</span>
+        <h2 class="section-title">My <em>Certificates</em></h2>
+      </div>
+      <div class="cert-grid">
+
+        <!-- Sertifikat 1: Estha Top 3 🏆 (highlight dulu karena prestasi) -->
+        <div class="cert-card cert-featured" data-animate id="cert-estha-top3">
+          <div class="cert-badge-featured">🏆 Top 3 Winner</div>
+          <div class="cert-img-wrapper" onclick="openCert('assets/sertifikat juara estha.jpg', 'AI Experience Project — Top 3')">
+            <img src="assets/sertifikat juara estha.jpg" alt="Top 3 AI Experience Project" class="cert-img" />
+            <div class="cert-img-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">Estha × SMK Telkom Purwokerto</span>
+            <h3 class="cert-title">AI Experience Project</h3>
+            <p class="cert-desc">Meraih posisi Top 3 dalam challenge AI Experience Project — mengembangkan project berbasis AI.</p>
+            <span class="cert-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              7 Januari 2025
+            </span>
+          </div>
+        </div>
+
+        <!-- Sertifikat 2: SynthID / IndoCEISS -->
+        <div class="cert-card" data-animate id="cert-synthid">
+          <div class="cert-img-wrapper" onclick="openCert('assets/sertifikat ngabuburit.png', 'Teknologi SynthID — IndoCEISS Jawa Tengah')">
+            <img src="assets/sertifikat ngabuburit.png" alt="Sertifikat IndoCEISS SynthID" class="cert-img" />
+            <div class="cert-img-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">IndoCEISS Jawa Tengah</span>
+            <h3 class="cert-title">Teknologi SynthID dalam Konten Visual</h3>
+            <p class="cert-desc">Peserta aktif webinar Ngabuburit bertema integritas konten visual menggunakan teknologi SynthID.</p>
+            <span class="cert-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              20 Februari 2026
+            </span>
+          </div>
+        </div>
+
+        <!-- Sertifikat 3: Estha Webinar Participant -->
+        <div class="cert-card" data-animate id="cert-estha-webinar">
+          <div class="cert-img-wrapper" onclick="openCert('assets/sertifikat estha.jpg', 'From Students to Creator — Estha × SMK Telkom')">
+            <img src="assets/sertifikat estha.jpg" alt="Certificate Estha Webinar" class="cert-img" />
+            <div class="cert-img-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">Estha × SMK Telkom Purwokerto</span>
+            <h3 class="cert-title">From Students to Creator</h3>
+            <p class="cert-desc">Peserta aktif webinar "Leveraging AI Experience to Address School Needs" — mengeksplor AI untuk kebutuhan pendidikan.</p>
+            <span class="cert-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              7 Januari 2025
+            </span>
+          </div>
+        </div>
+
+        <!-- Sertifikat 4: UIN SAIZU -->
+        <div class="cert-card" data-animate id="cert-uin">
+          <div class="cert-img-wrapper" onclick="openCert('assets/Andrean Rayhan Wijaya sertifikat.jpg', 'Webinar Informatika #4 — UIN SAIZU')">
+            <img src="assets/Andrean Rayhan Wijaya sertifikat.jpg" alt="Sertifikat UIN SAIZU Webinar Informatika" class="cert-img" />
+            <div class="cert-img-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Lihat Sertifikat</span>
+            </div>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">UIN SAIZU Purwokerto</span>
+            <h3 class="cert-title">Webinar Informatika #4</h3>
+            <p class="cert-desc">Peserta dalam kegiatan Webinar Informatika #4 di Kampus 2 UIN SAIZU — memperluas wawasan di bidang teknologi informasi.</p>
+            <span class="cert-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              26 Februari 2026
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div class="cert-lightbox" id="cert-lightbox" onclick="closeCert()">
+    <div class="cert-lightbox-inner" onclick="event.stopPropagation()">
+      <button class="cert-lightbox-close" onclick="closeCert()" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <img src="" alt="" id="lightbox-img" class="cert-lightbox-img" />
+      <p id="lightbox-caption" class="cert-lightbox-caption"></p>
+    </div>
+  </div>
+
   <!-- ===== CONTACT SECTION ===== -->
+
   <section class="section contact-section" id="contact">
     <div class="container">
       <div class="section-header" data-animate>
@@ -477,20 +531,20 @@
             <div class="form-row">
               <div class="form-group" id="form-group-name">
                 <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
+                <input type="text" id="name" name="name" class="form-input" required />
               </div>
               <div class="form-group" id="form-group-email">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required />
+                <input type="email" id="email" name="email" class="form-input" required />
               </div>
             </div>
             <div class="form-group" id="form-group-subject">
               <label for="subject" class="form-label">Subject</label>
-              <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Collaboration" />
+              <input type="text" id="subject" name="subject" class="form-input" />
             </div>
             <div class="form-group" id="form-group-message">
               <label for="message" class="form-label">Message</label>
-              <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+              <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="send-message-btn">
               Send Message
@@ -507,7 +561,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <span class="footer-logo">Andre</span>
+          <span class="footer-logo">AndreX</span>
           <p class="footer-tagline">Creative Designer & Visual Storyteller</p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -519,15 +573,28 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 Andrean Rayhan Wijaya. Crafted with passion.</p>
-        <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-        </a>
+        <div class="footer-left">
+          <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+          </a>
+          <p class="footer-copy">© 2026 Andrean Rayhan Wijaya. Crafted with passion.</p>
+        </div>
+        <div class="footer-socials">
+          <a href="mailto:andrayhan.wijaya@gmail.com" class="footer-social-link" aria-label="Email" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://github.com/andrejayas" target="_blank" class="footer-social-link" aria-label="GitHub" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.instagram.com/andrejaya459/" target="_blank" class="footer-social-link" aria-label="Instagram" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
       </div>
+
     </div>
   </footer>
 
-  <script src="terminal/terminal.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
