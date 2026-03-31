@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ───────────── CONTACT FORM ─────────────
   const contactForm = document.getElementById('contact-form');
 
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('send-message-btn');
     const originalText = btn.innerHTML;
@@ -149,21 +149,31 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.disabled = true;
     btn.style.opacity = '0.8';
 
-    // Simulate async send
+    // Real send to Formspree
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (response.ok) {
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Message Sent!`;
+        contactForm.reset();
+        showToast('✉️ Your message has been sent! I\'ll get back to you soon.');
+      } else {
+        throw new Error('Networking error or Captcha required');
+      }
+    } catch (error) {
+      showToast('❌ Oops! Error ngirim pesan. Coba lagi ya.');
+    }
+
+    // Reset button after 3s
     setTimeout(() => {
-      btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Message Sent!`;
-
-      contactForm.reset();
-
-      // Show toast
-      showToast('✉️ Your message has been sent! I\'ll get back to you soon.');
-
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-        btn.style.opacity = '';
-      }, 3000);
-    }, 1500);
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      btn.style.opacity = '';
+    }, 3000);
   });
 
 
